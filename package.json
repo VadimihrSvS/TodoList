@@ -2,8 +2,10 @@
   "name": "todolist-v1",
   "version": "1.0.0",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "scripts": {
+    "build": "yarn",
+    "environment":	"node",
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
