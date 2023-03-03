@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
    "scripts": {
-    "build": "yarn",
+    "build": "netlify-lambda build express",
     "environment":	"node",
     "start": "nodemon server.js"
   },
