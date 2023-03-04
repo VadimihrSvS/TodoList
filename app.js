@@ -7,7 +7,6 @@ const _ = require("lodash");
 const serverless = require("serverless-http");
 
 const app = express();
-const router = express.Router();
 
 app.set('view engine', 'ejs');
 
@@ -46,7 +45,7 @@ const List = mongoose.model("List", listSchema);
 
 
 
-router.get("/", function (req, res) {
+app.get("/", function (req, res) {
 
   Item.find({}).then((result) => {
     if (result.length === 0) {
@@ -68,7 +67,7 @@ router.get("/", function (req, res) {
   });
 });
 
-router.get("/:customListName", function (req, res) {
+app.get("/:customListName", function (req, res) {
   const customListName = _.capitalize(req.params.customListName);
   
   const list = new List({
@@ -95,7 +94,7 @@ router.get("/:customListName", function (req, res) {
 
 });
 
-router.post("/", function (req, res) {
+app.post("/", function (req, res) {
 
   const itemName = req.body.newItem;
   const listName = req.body.list;
@@ -121,7 +120,7 @@ router.post("/", function (req, res) {
 
 });
 
-router.post("/delete", function (req, res) {
+app.post("/delete", function (req, res) {
   const checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
 
@@ -145,7 +144,7 @@ router.post("/delete", function (req, res) {
 
 
 
-router.get("/about", function (req, res) {
+app.get("/about", function (req, res) {
   res.render("about");
 });
 
