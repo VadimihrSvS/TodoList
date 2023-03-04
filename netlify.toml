@@ -1,3 +1,6 @@
 
     [dev]
     publish = "dist"
+
+    [build]
+    functions = "functions"

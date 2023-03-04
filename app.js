@@ -4,8 +4,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+const serverless = require("serverless-http");
 
 const app = express();
+const router = express.Router();
 
 app.set('view engine', 'ejs');
 
@@ -146,6 +148,11 @@ router.post("/delete", function (req, res) {
 router.get("/about", function (req, res) {
   res.render("about");
 });
+
+app.use("/.netlify/functions/api", router);
+
+module.exports = app;
+module.exports.handler = serverless(app);
 
 app.listen(3000, function () {
   console.log("Server started on port 3000");
