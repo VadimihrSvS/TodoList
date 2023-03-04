@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "./node_modules/.bin/netlify-lambda build src",
-    "start": "./node_modules/.bin/netlify-lambda serve src"
+    "build": "netlify-lambda build src",
+    "start": "netlify-lambda serve src"
   },
   "author": "",
   "license": "ISC",
