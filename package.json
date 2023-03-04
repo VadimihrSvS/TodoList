@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "netlify-lambda serve src"
+    "start": "yarn"
   },
   "author": "",
   "license": "ISC",
