@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "netlify-lambda build src",
     "start": "netlify-lambda serve src"
   },
   "author": "",
