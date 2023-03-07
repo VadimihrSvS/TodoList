@@ -5,7 +5,7 @@
   "scripts": {
             "build": "yarn",
             "test": "echo \"No test specified\"",
-            "start": "node index.js"
+            "start": "node app.js"
        },
   "author": "",
   "license": "ISC",
